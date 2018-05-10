@@ -1,22 +1,17 @@
 $(() => $("#createButton").click(createUser));
 
 function createUser() {
-  const salaryVal = $("input[name=salary]")
-    .val()
-    .trim();
-  const salary = parseInt(salaryVal, 10);
 
   const user = {
     name: $("input[name=name]")
       .val()
       .trim(),
-    address: $("textarea[name=address]")
+    address: $("input[name=address]")
       .val()
       .trim(),
     position: $("input[name=position]")
       .val()
       .trim(),
-    salary
   };
 
   const request = $.ajax({

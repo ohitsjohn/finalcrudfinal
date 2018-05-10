@@ -82,4 +82,3 @@ userController.edit = function(req, res) {
   };
 
 module.exports = userController;
-

@@ -9,6 +9,7 @@ function clickHandler() {
 }
 
 function deleteUser(uid) {
+  console.log($)
   const request = $.ajax({
     url: `/users/user/${uid}`,
     type: "delete",

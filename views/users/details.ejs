@@ -20,8 +20,10 @@
 
   <nav class="navbar navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Contact Management</a>
-    <a class="btn btn-outline-light" href="/users" role="button">Index</a>
-    <a class="btn btn-outline-light" href="/users/user" role="button">New</a>
+      <form class="form-inline">
+        <a class="btn btn-outline-light" href="/users" role="button">Index</a>
+        <a class="btn btn-outline-light" href="/users/user" role="button">New</a>
+      </form>
   </nav>
   
   <br>
@@ -30,24 +32,18 @@
       <div class="row">
           <div class="col-md-6 col-md-offset-3">
               <div class="panel panel-default">
-                  <div class="panel-heading">New Contact</div>
+                  <div class="panel-heading">Contact</div>
                   <div class="panel-body">
-                      <div class="form-group">
-                          <label for="inputName">Name:</label>
-                          <input type="text" class="form-control" name="name" placeholder="John Doe">
-                      </div>
-                      <div class="form-group">
-                          <label for="inputEmail">Email:</label>
-                          <input type="text" class="form-control" name="position" placeholder="username@email.com">
-                      </div>
-                      <div class="form-group">
-                          <label for="inputPhone">Phone:</label>
-                          <input type="number" class="form-control" name="address" placeholder="7777777777">
-                      </div>
+                      <p>Name: <%= user.name %></p>
+                      <br>
+                      <p>Email: <%= user.address %</p>
+                      <br>
+                      <p>Phone: <%= user.position %></p>
                   </div>
                   <div class="panel-footer clearfix">
                       <div class="text-right">
-                          <a class="btn btn-success" href="/users" role="button" button id="createButton">Submit</a>
+                        <a class="btn btn-warning" href="/users/user/<%= users[i]._id%>" role="button">Edit</a>
+                        <button class="deleteButton btn btn-outline-danger" data-uid="<%= users[i]._id%>">Delete</button>
                       </div>
                   </div>
               </div>
